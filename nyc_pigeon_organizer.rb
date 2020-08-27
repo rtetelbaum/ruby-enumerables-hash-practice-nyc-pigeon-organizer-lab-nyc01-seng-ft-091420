@@ -1,17 +1,17 @@
 def nyc_pigeon_organizer(data)
-  
-  data.each_with_object({}) do |(key, value), final_array|
-    value.each do |(inner_key, names)|
+  pigeons = {}
+  data.each do |key, value|
+    value.each do |inner_value, names|
       names.each do |name|
-        if !final_array[name]
-          final_array[name] = {}
+        if !pigeons[name]
+          pigeons[name] = {}
         end
-        if !final_array[name][key]
-          !final_array[name][key] = []
+        if !pigeons[name][key]
+          pigeons[name][key] = []
         end
-        final_array[name][key].push(inner_key.to_s)
+        pigeons[name][key].push(inner_value.to_s)
       end
     end
-    final_array
   end
+  pigeons
 end
