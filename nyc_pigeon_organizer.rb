@@ -7,6 +7,7 @@ def nyc_pigeon_organizer(data)
       names.each do |name|
         if !pigeons[name]
           pigeons[name] = {}
+          binding.pry
         end
         if !pigeons[name][key]
           pigeons[name][key] = []
@@ -16,5 +17,4 @@ def nyc_pigeon_organizer(data)
     end
   end
   pigeons
-  binding.pry
 end
