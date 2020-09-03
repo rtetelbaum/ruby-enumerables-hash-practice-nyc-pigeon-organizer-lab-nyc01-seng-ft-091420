@@ -7,10 +7,10 @@ def nyc_pigeon_organizer(data)
       names.each do |name|
         if !pigeons[name]
           pigeons[name] = {}
-          binding.pry
         end
         if !pigeons[name][key]
           pigeons[name][key] = []
+          binding.pry
         end
         pigeons[name][key].push(inner_key.to_s)
       end
