@@ -1,3 +1,5 @@
+require 'pry'
+
 def nyc_pigeon_organizer(data)
   pigeons = {}
   data.each do |key, value|
@@ -14,4 +16,5 @@ def nyc_pigeon_organizer(data)
     end
   end
   pigeons
+  binding.pry
 end
